@@ -13,7 +13,7 @@ export default function App() {
       <NavigationContainer>
      <Tab.Navigator> 
         <Tab.Screen name ="accueil" component={Accueil} options={{
-          tabBarIcon : ()=> <MaterialCommunityIcons name="home" size={30} />
+          tabBarIcon : ()=> <MaterialCommunityIcons name="home-circle-outline" size={30} />
         }} />
         <Tab.Screen name ="connexion" component={Login} options={{
           tabBarIcon : ()=> <MaterialCommunityIcons name="login" size={30} />
