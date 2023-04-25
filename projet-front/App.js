@@ -2,14 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
+import { ProfilContextProvider } from './context/profilContext';
 import Login from './composants/Login';
 import Accueil from './composants/Accueil';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
  const Tab =createBottomTabNavigator ()
 export default function App() {
   return (
     <View style={styles.container}>
+      <ProfilContextProvider>
       <NavigationContainer>
      <Tab.Navigator> 
         <Tab.Screen name ="accueil" component={Accueil} options={{
@@ -20,6 +23,7 @@ export default function App() {
         }} />
      </Tab.Navigator>
      </NavigationContainer>
+     </ProfilContextProvider>
       <StatusBar style="auto" />
     </View>
   );
