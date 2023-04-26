@@ -8,6 +8,7 @@ const schemaJoiUser = Joi.object({
 const schemaLogin = Joi.object({
     email : Joi.string().email({ tlds: { allow: false } }).required(),
     password : Joi.string().regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/).required(),
+    
 })
 
 const schemaOeuvreJoi = Joi.object({ 
