@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { ProfilContextProvider } from './context/profilContext';
 import Login from './composants/Login';
-import Accueil from './composants/Accueil'
+import Navstack from './composants/Navstack';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator()
@@ -14,15 +14,15 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ProfilContextProvider>  
-     
           <NavigationContainer>
-            <Tab.Navigator>
-            
-                <Tab.Screen name="accueil" component={ Accueil }
+            <Tab.Navigator screenOptions={{
+              headerShown: false
+            }}>
+                <Tab.Screen name="Accueil_default" component={Navstack}
                 options={{
                   tabBarIcon : ()=><MaterialCommunityIcons name="home" size={30} />
                 }}/>
-                <Tab.Screen name="connexion" component={ Login }
+                <Tab.Screen name="Connexion" component={ Login }
                 options={{
                   tabBarIcon : ()=><MaterialCommunityIcons name="login" size={30} />
                 }}/>

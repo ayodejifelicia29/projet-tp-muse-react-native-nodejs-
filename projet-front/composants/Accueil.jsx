@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View,Image, ScrollView } from 'react-native'
+import { StyleSheet, Text, View,Image, ScrollView, Button } from 'react-native'
 import React, { useContext,useEffect ,useState} from 'react'
 import { ProfilContext } from '../context/profilContext'
 import * as SQLITE from "expo-sqlite"
 
 
-const Accueil = () => {
+const Accueil = ({navigation}) => {
   
     // const {jwt}= useContext(ProfilContext)
    /* useEffect(function(){
@@ -32,7 +32,8 @@ const Accueil = () => {
           return <View key ={index}style={styles.oeuvre} >
             <Text>{r.nom}</Text>
             <Image source ={{uri : r.image}} style ={styles.img} />
-            {/*<Text>{r.description}</Text> */}
+            <Button title="plus de détails"onPress={()=>{navigation.navigate("single" ,{id:r._id})}}/>
+            
             </View>
         })}
   </ScrollView>
