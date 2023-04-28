@@ -9,7 +9,7 @@ route.get("/", function(request, reponse){
     reponse.json({msg : "fonction"})
 })
 
-route.post("/", [autorisation,isValideOeuvre], async (request ,reponse)=>{
+route.post("/", [/*autorisation,isValideOeuvre*/], async (request ,reponse)=>{
 
 	const{body} = request
 	const dt_creation= new Date();
@@ -31,7 +31,7 @@ route.put("/:id",[idValid, isValideOeuvre], async(request,reponse)=>{
 	reponse.json(oeuvreUpdated)
 })
 
-route.delete("/:id",[autorisation,isAdmin,idValid],async(request , reponse) => {
+route.delete("/:id",[/*autorisation,isAdmin,*/idValid],async(request , reponse) => {
     const id = request.params.id ;
      const delteOeuvre = await Oeuvre.findByIdAndRemove (id) 
    reponse.json({msg :`l'oeuvre ${id}est bien supprimé`});

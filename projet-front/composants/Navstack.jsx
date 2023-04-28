@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Accueil from './Accueil';
 import Single from './Single';
 
+
 const Stack = createNativeStackNavigator();
 
 
@@ -12,7 +13,12 @@ const Navstack = () => {
 	<Stack.Navigator>
 		<Stack.Screen name="Accueil" component={Accueil}/>
 		<Stack.Screen name="single" component={Single}/>
+			
+		
+
 	</Stack.Navigator>
+
+
   )
 }
 

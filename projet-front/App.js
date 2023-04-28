@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { ProfilContextProvider } from './context/profilContext';
 import Login from './composants/Login';
 import Navstack from './composants/Navstack';
+import Admin from './composants/Admin';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const Tab = createBottomTabNavigator()
@@ -26,8 +27,13 @@ export default function App() {
                 options={{
                   tabBarIcon : ()=><MaterialCommunityIcons name="login" size={30} />
                 }}/>
+                 <Tab.Screen name="Admin" component={Admin }
+                options={{
+                  tabBarIcon : ()=><MaterialCommunityIcons name="view-dashboard-outline" size={30} />
+                }}/>
             </Tab.Navigator>
           </NavigationContainer>
+
       </ProfilContextProvider>
       <StatusBar style="auto" backgroundColor='orange'/>
     </View>
