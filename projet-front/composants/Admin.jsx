@@ -11,9 +11,9 @@ const Admin = () => {
     
 	function creer() {
 		const oeuvre ={
-			"nom" : "Baldumoulin",
-			"description":"peniture est tres bien",
-			"image" : "https://postimg.cc/Lnr3bGQZ/e9c994fb/400/200",
+			"nom" : "Mona LisA",
+			"description":"Elle est située dans le Louvre à Paris.",
+			"image" : "https://www.artblr.com/upload/userfiles/images/Mona_lisa.jpg",
 			"auteur" : "Vincent Gogh",
 			"dt_creation":Date.now
 			}
